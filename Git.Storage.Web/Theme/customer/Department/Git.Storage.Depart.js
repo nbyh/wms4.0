@@ -132,7 +132,7 @@ var Depart = {
                     $.gitAjax({
                         url: "/DepartAjax/BatchDel", type: "post", data: param, success: function (result) {
                             if (result.d == "success") {
-                                Depart.PageClick(1, 10);
+                                Depart.PageClick(1, 15);
                             } else {
                                 $.jBox.tip("删除失败", "error");
                             }

@@ -1,7 +1,6 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="zh" class="ie9"> <![endif]-->
@@ -72,16 +71,16 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="span3">
-                                                    <div class="control-group">
-                                                        <!--control-group error-->
-                                                        <label class="control-label" for="txtContractOrder">关联订单号</label>
-                                                        <div class="controls">
-                                                            <input type="text" id="txtContractOrder" name="txtContractOrder" class="span12" placeholder="">
-                                                            <span class="help-block"></span>
+                                                @*<div class="span3">
+                                                        <div class="control-group">
+                                                            <!--control-group error-->
+                                                            <label class="control-label" for="txtContractOrder">关联订单号</label>
+                                                            <div class="controls">
+                                                                <input type="text" id="txtContractOrder" name="txtContractOrder" class="span12" placeholder="">
+                                                                <span class="help-block"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
+                                                    </div>*@
                                                 <div class="span3">
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtOrderTime">发货日期 </label>
@@ -97,7 +96,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtCusNum">领用编号</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtCusNum" name="txtCusNum" class="span12" placeholder="输入关键字搜索或者双击选择"/>
+                                                            <input type="text" id="txtCusNum" name="txtCusNum" class="span12" placeholder="输入关键字搜索或者双击选择" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -111,18 +110,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                               
-                                              <div class="span3">
+
+                                                <div class="span3">
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtAddress">领用地址</label>
                                                         <div class="controls">
-                                                            <select id="ddlAddress" name="ddlAddress" class="span12"  onchange="orderProduct.AddressChange()">
-                                                            </select>
+                                                            <select id="ddlAddress" name="ddlAddress" class="span12" onchange="orderProduct.AddressChange()"></select>
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                  <div class="span3">
+                                                <div class="span3">
                                                     <div class="control-group">
                                                         <!--control-group error-->
                                                         <label class="control-label" for="txtCusPhone">领用联系方式</label>
@@ -138,7 +136,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtContactName">联系人</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtContactName" name="txtContactName" class="span12" placeholder=""/>
+                                                            <input type="text" id="txtContactName" name="txtContactName" class="span12" placeholder="" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -147,7 +145,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtCrateUser">制单人</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.CraterUser"/>
+                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.CraterUser" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -156,7 +154,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtRemark">备注</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtRemark" name="txtRemark" class="span12" placeholder=""/>
+                                                            <input type="text" id="txtRemark" name="txtRemark" class="span12" placeholder="" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -176,11 +174,10 @@
                                         </form>
                                     </div>
                                 </div>
-
                                 <br />
                                 <table class="table table-striped table-bordered table-hover" id="tabInfo">
                                     <thead>
-                                        <tr class="widget-title">                                            
+                                        <tr class="widget-title">
                                             <th class="hidden-480">产品名称</th>
                                             <th class="hidden-480">产品条码</th>
                                             <th class="hidden-480">产品编号</th>
@@ -193,10 +190,8 @@
                                             <th>操作</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                    </tbody>
+                                    <tbody></tbody>
                                 </table>
-
                                 <div class="form-actions formBtn">
                                     @*<button type="button" class="btn btn-primary" onclick="orderProduct.SelectOrder()"><i class="icon-plus"></i>订单出货</button>*@
                                     <button type="button" class="btn btn-primary" onclick="orderProduct.SelectDialog()"><i class="icon-plus"></i>新增产品</button>
@@ -211,7 +206,6 @@
         </div>
     </div>
     @Html.Partial("_Foot")
-
     <script type="text/javascript">
         $(document).ready(function () {
             orderProduct.Load();
@@ -219,5 +213,4 @@
         });
     </script>
 </body>
-
 </html>

@@ -321,7 +321,7 @@ var ProductMoveManager = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            ProductMoveManager.PageClick(1, 10);
+            ProductMoveManager.PageClick(1, 15);
         });
     },
     SelectAll: function (item) {
@@ -374,7 +374,7 @@ var ProductMoveManager = {
                 dataType: "json",
                 success: function (result) {
                     if (result.d != undefined && result.d == "Success") {
-                        ProductMoveManager.PageClick(1, 10);
+                        ProductMoveManager.PageClick(1, 15);
                     }
                 }
             });
@@ -406,7 +406,7 @@ var ProductMoveManager = {
                         success: function (result) {
                             if (result.d != undefined && result.d == "1000") {
                                 $.jBox.tip("移库单审核成功", "success");
-                                ProductMoveManager.PageClick(1, 10);
+                                ProductMoveManager.PageClick(1, 15);
                             } else {
                                 $.jBox.tip("移库单审核失败", "warn");
                             }

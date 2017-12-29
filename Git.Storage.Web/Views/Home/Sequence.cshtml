@@ -50,7 +50,7 @@
                                             <div class="controls controls-cus">
                                                 表名:<input id="txtTabName" name="txtTabName" type="text" class="input-medium" placeholder="请输入表名" />
                                                 日期:<input id="txtDay" name="txtDay" type="text" class="input-medium" placeholder="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" />
-                                                <a id="gritter-remove-all" class="btn btn-info" href="javascript:void(0)" onclick="Sequence.PageClick(1, 10)"><i class="icon-search"></i>&nbsp;搜索</a>
+                                                <a id="gritter-remove-all" class="btn btn-info" href="javascript:void(0)" onclick="Sequence.PageClick(1, 15)"><i class="icon-search"></i>&nbsp;搜索</a>
                                             </div>
                                         </div>
                                     </form>
@@ -80,7 +80,7 @@
     @Html.Partial("_Foot")
     <script type="text/javascript">
         $(document).ready(function () {
-            Sequence.PageClick(1, 10);
+            Sequence.PageClick(1, 15);
         });
     </script>
 </body>

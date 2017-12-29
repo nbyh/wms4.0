@@ -102,7 +102,7 @@ var Equipment = {
                             } else {
                                 $.jBox.tip("编辑成功", "success");
                             }
-                            Equipment.PageClick(1, 10);
+                            Equipment.PageClick(1, 15);
                             return true;
                         } else {
                             if (SnNum == undefined || SnNum == "") {
@@ -147,7 +147,7 @@ var Equipment = {
                     url: "/EquipmentAjax/AddEquipment", type: "post", data: { "entity": JSON.stringify(param) }, success: function (result) {
                         if (result.d == "success") {
                             $.jBox.tip("授权成功", "success");
-                            Equipment.PageClick(1, 10);
+                            Equipment.PageClick(1, 15);
                             return true;
                         } else {
                             $.jBox.tip("授权失败", "error");
@@ -170,7 +170,7 @@ var Equipment = {
                 $.gitAjax({
                     url: "/EquipmentAjax/Delete", type: "post", data: param, success: function (result) {
                         if (result.d == "success") {
-                            Equipment.PageClick(1, 10);
+                            Equipment.PageClick(1, 15);
                         } else {
                             $.jBox.tip("删除失败", "error");
                         }

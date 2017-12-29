@@ -57,7 +57,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtOrderNum">入库单编号</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtOrderNum" name="txtOrderNum" class="span12" placeholder="可不填,自动生成" disabled="disabled" value="@ViewBag.InStorage.OrderNum"/>
+                                                            <input type="text" id="txtOrderNum" name="txtOrderNum" class="span12" placeholder="可不填,自动生成" disabled="disabled" value="@ViewBag.InStorage.OrderNum" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -73,20 +73,20 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="span3">
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="txtContractOrder">关联订单号</label>
-                                                        <div class="controls">
-                                                            <input type="text" id="txtContractOrder" name="txtContractOrder" class="span12" placeholder=""  value="@ViewBag.InStorage.ContractOrder"/>
-                                                            <span class="help-block"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @*<div class="span3">
+            <div class="control-group">
+                <label class="control-label" for="txtContractOrder">关联订单号</label>
+                <div class="controls">
+                    <input type="text" id="txtContractOrder" name="txtContractOrder" class="span12" placeholder=""  value="@ViewBag.InStorage.ContractOrder"/>
+                    <span class="help-block"></span>
+                </div>
+            </div>
+        </div>*@
                                                 <div class="span3">
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtCrateUser">制单人</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.InStorage.CreateUserName"/>
+                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.InStorage.CreateUserName" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>

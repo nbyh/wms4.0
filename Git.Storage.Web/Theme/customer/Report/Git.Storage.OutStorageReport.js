@@ -120,7 +120,7 @@ var OutStorageReport = {
             $(this).addClass("active");
             $("#hdIndex").val("1");
             maxPageIndex = 1;
-            OutStorageReport.PageClick(1, 10);
+            OutStorageReport.PageClick(1, 15);
             OutStorageReport.PageClickDetail(1, 10);
             OutStorageReport.OutStorageAmpie(0);
         });

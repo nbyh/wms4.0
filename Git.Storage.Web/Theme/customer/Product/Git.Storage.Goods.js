@@ -145,7 +145,7 @@ var Category = {
     Load: function () {
         $("#txtCategory").keydown(function (e) {
             if (e.keyCode == 13) {
-                Category.PageClick(1, 10);
+                Category.PageClick(1, 15);
             }
         });
     }

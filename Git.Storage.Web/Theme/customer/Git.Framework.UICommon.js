@@ -302,7 +302,7 @@ var AccountSetting = {
                     url: "/UserAjax/AddUser", type: "post", data: { "entity": JSON.stringify(param) }, success: function (result) {
                         if (result.d == "success") {
                             $.jBox.tip("编辑成功", "success");
-                            User.PageClick(1, 10);
+                            User.PageClick(1, 15);
                         } else {
                             $.jBox.tip("编辑失败", "error");
                         }

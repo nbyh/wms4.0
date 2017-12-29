@@ -69,7 +69,7 @@
                                                 名称<input id="txtReportName" name="txtReportName" type="text" class="input-medium" placeholder="请输入报表名称或编号" />&nbsp;&nbsp;
                                                 报表类型<select id="ddlOrderType" name="ddlOrderType">@Html.Raw(ViewBag.ReportType)</select>
                                                 
-                                                <a id="gritter-remove-all" class="btn btn-info" href="javascript:void(0)" onclick="ReportListManager.PageClick(1, 10)"><i class="icon-search"></i>&nbsp;搜索</a>
+                                                <a id="gritter-remove-all" class="btn btn-info" href="javascript:void(0)" onclick="ReportListManager.PageClick(1, 15)"><i class="icon-search"></i>&nbsp;搜索</a>
                                                 
                                             </div>
                                         </div>
@@ -105,7 +105,7 @@
     @Html.Partial("_Foot")
     <script type="text/javascript">
         $(document).ready(function () {
-            ReportListManager.PageClick(1, 10);
+            ReportListManager.PageClick(1, 15);
             ReportListManager.TabClick();
         });
     </script>

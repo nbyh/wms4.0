@@ -104,7 +104,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="span2">
+                                                    @*<div class="span2">
                                                         <div class="control-group">
                                                             <label for="firstName" class="control-label">关联单号</label>
                                                             <div class="controls">
@@ -112,7 +112,7 @@
                                                                 <span class="help-block"></span>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div>*@
                                                     <div class="span2">
                                                         <div class="control-group">
                                                             <label for="firstName" class="control-label">&nbsp;&nbsp;</label>
@@ -132,7 +132,7 @@
                                             <th class="hidden-480">入库单号</th>
                                             <th class="hidden-480">入库类型</th>
                                             <th class="hidden-480">供应商</th>
-                                            <th class="hidden-480">关联单号</th>
+                                            @*<th class="hidden-480">关联单号</th>*@
                                             <th class="hidden-480">货品总数</th>
                                             <th class="hidden-480">总金额</th>
                                             <th class="hidden-480">状态</th>
@@ -157,12 +157,12 @@
     @Html.Partial("_Foot")
     <script type="text/javascript">
         $(document).ready(function () {
-            InStorageManager.PageClick(1, 10);
+            InStorageManager.PageClick(1, 15);
             InStorageManager.TabClick();
             InStorageManager.SearchEvent();
             $("#txtOrderNum,#txtSupplier,#txtPlanNum").keydown(function (e) {
                 if (e.keyCode == 13) {
-                    InStorageManager.PageClick(1, 10);
+                    InStorageManager.PageClick(1, 15);
                 }
             });
         });

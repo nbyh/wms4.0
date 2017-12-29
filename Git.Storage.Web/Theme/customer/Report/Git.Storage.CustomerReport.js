@@ -79,7 +79,7 @@ var CustomerReport = {
         $("#liStatusGroup").children("li").click(function () {
             $("#liStatusGroup").children("li").removeClass("active");
             $(this).addClass("active");
-            CustomerReport.PageClick(1, 10);
+            CustomerReport.PageClick(1, 15);
             CustomerReport.CustomerReportTOP10(1, 10);
         });
     }

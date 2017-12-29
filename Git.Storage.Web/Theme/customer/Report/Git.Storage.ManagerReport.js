@@ -282,7 +282,7 @@ var ReportListManager = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            ReportListManager.PageClick(1, 10);
+            ReportListManager.PageClick(1, 15);
         });
     },
     Delete: function (ReportNum) {
@@ -316,7 +316,7 @@ var ReportListManager = {
             data: param,
             async: false,
             success: function (result) {
-                ReportListManager.PageClick(1, 10);
+                ReportListManager.PageClick(1, 15);
             }
         });
     },

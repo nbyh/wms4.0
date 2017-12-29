@@ -338,7 +338,7 @@ var InStorageManager = {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
         pageSize = pageSize == undefined ? 10 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
-        var orderNum = $("#txtOrderNum").val();
+        //var orderNum = $("#txtOrderNum").val();
         var supNum = $("#txtSupplier").val();
         var beginTime = $("#txtBeginTime").val();
         var endTime = $("#txtEndTime").val();
@@ -347,7 +347,7 @@ var InStorageManager = {
         var ReprtNum = $("#txtReprtNum").val();
         var param = {};
         param["Status"] = status;
-        param["OrderNum"] = orderNum;
+        //param["OrderNum"] = orderNum;
         param["SupName"] = supNum;
         param["beginTime"] = beginTime;
         param["endTime"] = endTime;
@@ -371,7 +371,7 @@ var InStorageManager = {
                             html += "<td>" + item.OrderNum + "</td>";
                             html += "<td>" + git.GetEnumDesc(EInType, item.InType) + "</td>";
                             html += "<td>" + item.SupName + "</td>";
-                            html += "<td>" + item.ContractOrder + "</td>";
+                            //html += "<td>" + item.ContractOrder + "</td>";
                             html += "<td>" + item.Num + "</td>";
                             html += "<td>" + git.ToDecimal(item.Amount,2) + "&nbsp;元</td>";
                             html += "<td>" + git.GetEnumDesc(EAudite, item.Status) + "</td>";
@@ -405,7 +405,7 @@ var InStorageManager = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            InStorageManager.PageClick(1, 10);
+            InStorageManager.PageClick(1, 15);
         });
     },
     Delete: function (orderNum) {
@@ -419,7 +419,7 @@ var InStorageManager = {
                 dataType: "json",
                 success: function (result) {
                     if (result.d != undefined && result.d == "Success") {
-                        InStorageManager.PageClick(1, 10);
+                        InStorageManager.PageClick(1, 15);
                     }
                 }
             });
@@ -484,7 +484,7 @@ var InStorageManager = {
                             } else {
                                 $.jBox.tip("操作失败", "warn");
                             }
-                            InStorageManager.PageClick(1, 10);
+                            InStorageManager.PageClick(1, 15);
                         }
                     });
                 }

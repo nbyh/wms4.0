@@ -143,7 +143,7 @@ var Supplier = {
                             } else {
                                 $.jBox.tip("编辑成功", "success");
                             }
-                            Supplier.PageClick(1, 10);
+                            Supplier.PageClick(1, 15);
                             return true;
                         } else {
                             if (SupNum == undefined || SupNum == "") {
@@ -174,7 +174,7 @@ var Supplier = {
                 $.gitAjax({
                     url: "/SupplierAjax/Delete", type: "post", data: param, success: function (result) {
                         if (result.d == "success") {
-                            Supplier.PageClick(1, 10);
+                            Supplier.PageClick(1, 15);
                         } else {
                             $.jBox.tip("删除失败", "error");
                         }

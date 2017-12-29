@@ -78,7 +78,7 @@ var BadReport = {
         $("#liStatusGroup").children("li").click(function () {
             $("#liStatusGroup").children("li").removeClass("active");
             $(this).addClass("active");
-            BadReport.PageClick(1, 10);
+            BadReport.PageClick(1, 15);
             BadReport.BadReportTOP10(1, 10);
         });
     }

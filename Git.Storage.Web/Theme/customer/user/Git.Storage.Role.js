@@ -66,7 +66,7 @@ var Role = {
                             } else {
                                 $.jBox.tip("编辑成功", "success");
                             }
-                            Role.PageClick(1, 10);
+                            Role.PageClick(1, 15);
                             return true;
                         } else {
                             if (roleNum == undefined || roleNum == "") {
@@ -140,7 +140,7 @@ var Role = {
                     $.gitAjax({
                         url: "/RoleAjax/BatchDel", type: "post", data: param, success: function (result) {
                             if (result.d == "success") {
-                                Role.PageClick(1, 10);
+                                Role.PageClick(1, 15);
                             } else {
                                 $.jBox.tip("删除失败", "error");
                             }

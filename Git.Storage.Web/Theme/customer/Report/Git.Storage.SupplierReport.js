@@ -80,7 +80,7 @@ var SupplierReport = {
         $("#liStatusGroup").children("li").click(function () {
             $("#liStatusGroup").children("li").removeClass("active");
             $(this).addClass("active");
-            SupplierReport.PageClick(1, 10);
+            SupplierReport.PageClick(1, 15);
             SupplierReport.SupplierReportTOP10(1, 10);
         });
     }

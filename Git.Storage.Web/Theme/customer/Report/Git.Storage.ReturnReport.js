@@ -78,7 +78,7 @@ var ReturnReport = {
         $("#liStatusGroup").children("li").click(function () {
             $("#liStatusGroup").children("li").removeClass("active");
             $(this).addClass("active");
-            ReturnReport.PageClick(1, 10);
+            ReturnReport.PageClick(1, 15);
             ReturnReport.ReturnReportTOP10(1, 10);
         });
     }

@@ -222,7 +222,7 @@ var ReturnManager = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            ReturnManager.PageClick(1, 10);
+            ReturnManager.PageClick(1, 15);
         });
     },
     Delete: function (orderNum) {
@@ -266,7 +266,7 @@ var ReturnManager = {
                         success: function (result) {
                             if (result.d != undefined && result.d == "1000") {
                                 $.jBox.tip("退货单审核成功", "success");
-                                ReturnManager.PageClick(1, 10);
+                                ReturnManager.PageClick(1, 15);
                             } else {
                                 $.jBox.tip("退货单审核失败", "warn");
                             }

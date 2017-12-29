@@ -354,7 +354,7 @@ var ProductBadManager = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            ProductBadManager.PageClick(1, 10);
+            ProductBadManager.PageClick(1, 15);
         });
     },
     SelectAll: function (item) {
@@ -407,7 +407,7 @@ var ProductBadManager = {
                 dataType: "json",
                 success: function (result) {
                     if (result.d != undefined && result.d == "Success") {
-                        ProductBadManager.PageClick(1, 10);
+                        ProductBadManager.PageClick(1, 15);
                     }
                 }
             });
@@ -441,7 +441,7 @@ var ProductBadManager = {
                         success: function (result) {
                             if (result.d != undefined && result.d == "1000") {
                                 $.jBox.tip("操作成功", "success");
-                                ProductBadManager.PageClick(1, 10);
+                                ProductBadManager.PageClick(1, 15);
                             } else {
                                 $.jBox.tip("操作失败", "error");
                             }

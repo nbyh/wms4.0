@@ -68,7 +68,7 @@ var ProductInOutReport = {
         $("#liStatusGroup").children("li").click(function () {
             $("#liStatusGroup").children("li").removeClass("active");
             $(this).addClass("active");
-            ProductInOutReport.PageClick(1, 10);
+            ProductInOutReport.PageClick(1, 15);
             ProductInOutReport.BindPieData();
         });
     },

@@ -61,7 +61,7 @@ var Measure = {
                             }
                         } else {
                             if (result.Key == "1000") {
-                                Measure.PageClick(1, 10);
+                                Measure.PageClick(1, 15);
                                 $.jBox.tip("编辑成功", "success");
                             } else {
                                 $.jBox.tip("编辑失败", "error");
@@ -92,7 +92,7 @@ var Measure = {
             dataType: "json",
             success: function (result) {
                 if (result.Key == "1000") {
-                    Measure.PageClick(1, 10);
+                    Measure.PageClick(1, 15);
                 } else {
                     $.jBox.tip("删除失败", "error");
                 }

@@ -450,7 +450,7 @@ var OutStore = {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
         pageSize = pageSize == undefined ? 10 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
-        var OrderNum = $("#txtOutStoreNum").val();
+        //var OrderNum = $("#txtOutStoreNum").val();
         var CusName = $("#txtCustomer").val();
         var beginTime = $("#txtBeginTime").val();
         var endTime = $("#txtEndTime").val();
@@ -460,7 +460,7 @@ var OutStore = {
         var ReprtNum = $("#txtReprtNum").val();
         var param = {};
         param["Status"] = status;
-        param["OrderNum"] = OrderNum;
+        //param["OrderNum"] = OrderNum;
         param["CusName"] = CusName;
         param["beginTime"] = beginTime;
         param["endTime"] = endTime;
@@ -487,7 +487,7 @@ var OutStore = {
                             Html += "<td>" + item.OrderNum + "</td>";
                             Html += "<td>" + git.GetEnumDesc(EOutType, item.OutType) + "</td>";
                             Html += "<td>" + item.CusName + "</td>";
-                            Html += "<td>" + item.ContractOrder + "</td>";
+                            //Html += "<td>" + item.ContractOrder + "</td>";
                             Html += "<td>" + item.Num + "</td>";
                             Html += "<td>" + git.ToDecimal(item.Amount,2) + "&nbsp;元</td>";
                             Html += "<td>" + git.GetEnumDesc(EAudite, item.Status) + "</td>";
@@ -553,7 +553,7 @@ var OutStore = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            OutStore.PageClick(1, 10);
+            OutStore.PageClick(1, 15);
         });
     },
     Edit: function (OrderNum) {

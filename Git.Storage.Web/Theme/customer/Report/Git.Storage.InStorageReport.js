@@ -123,7 +123,7 @@ var InStorageReport = {
             $(this).addClass("active");
             $("#hdIndex").val("1");
             maxPageIndex = 1;
-            InStorageReport.PageClick(1, 10);
+            InStorageReport.PageClick(1, 15);
             InStorageReport.PageClickDetail(1, 10);
             InStorageReport.InStorageAmpie(0);
         });
@@ -157,7 +157,7 @@ var InStorageReport = {
                             } else {
                                 $.jBox.tip("操作失败", "warn");
                             }
-                            InStorageReport.PageClick(1, 10);
+                            InStorageReport.PageClick(1, 15);
                         }
                     });
                 }

@@ -260,7 +260,7 @@ namespace Git.Storage.Provider.OutStorage
             entity.Where(a => a.IsDelete == (int)EIsDelete.NotDelete);
             entity.OrderBy(a => a.ID, EOrderBy.DESC);
             AdminEntity admin = new AdminEntity();
-            admin.Include(a => new { CreateUserName = a.UserName });
+            admin.Include(a => new { CreateUserName = a.RealName });
             entity.Left<AdminEntity>(admin, new Params<string, string>() { Item1 = "CreateUser", Item2 = "UserCode" });
             int rowCount = 0;
             List<OutStorageEntity> listResult = this.OutStorage.GetList(entity, pageInfo.PageSize, pageInfo.PageIndex, out rowCount);

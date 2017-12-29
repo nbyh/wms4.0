@@ -90,7 +90,7 @@ var Customer = {
                             } else {
                                 $.jBox.tip("编辑成功", "success");
                             }
-                            Customer.PageClick(1, 10);
+                            Customer.PageClick(1, 15);
                             return true;
                         } else {
                             if (CusNum == undefined || CusNum == "") {
@@ -205,7 +205,7 @@ var Customer = {
                 $.gitAjax({
                     url: "/CustomerAjax/Delete", type: "post", data: param, success: function (result) {
                         if (result.d == "success") {
-                            Customer.PageClick(1, 10);
+                            Customer.PageClick(1, 15);
                         } else {
                             $.jBox.tip("删除失败", "error");
                         }

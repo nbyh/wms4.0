@@ -278,7 +278,7 @@ var CheckManager = {
             data: param,
             success: function (result) {
                 if (result.d == "Success") {
-                    CheckManager.PageClick(1, 10);
+                    CheckManager.PageClick(1, 15);
                 } else {
                     $.jBox.tip("删除失败,请联系管理员", "warn");
                 }
@@ -289,12 +289,12 @@ var CheckManager = {
         $("#btnStatusGroup").children("button").click(function () {
             $("#btnStatusGroup").children("button").removeClass("disabled");
             $(this).addClass("disabled");
-            CheckManager.PageClick(1, 10);
+            CheckManager.PageClick(1, 15);
         });
     },
     Load: function () {
         CheckManager.TabClick();
-        CheckManager.PageClick(1, 10);
+        CheckManager.PageClick(1, 15);
     },
     DifPageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
@@ -426,7 +426,7 @@ var CheckManager = {
                 $.gitAjax({
                     url: "/Check/ProductManagerAjax/DeleteBatch", type: "post", data: param, success: function (result) {
                         if (result.d == "Success") {
-                            CheckManager.PageClick(1, 10);
+                            CheckManager.PageClick(1, 15);
                         } else {
                             $.jBox.tip("删除失败", "error");
                         }
