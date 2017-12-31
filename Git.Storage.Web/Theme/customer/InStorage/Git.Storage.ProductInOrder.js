@@ -75,7 +75,7 @@ var orderProduct = {
                         $(item).find("#txtBarCode").val(result.BarCode);
                         $(item).find("#txtProductName").val(result.ProductName);
                         $(item).find("#txtSize").val(unescape(result.Size));
-                        $(item).find("#txtPrice").val(git.ToDecimal(result.InPrice,2));
+                        $(item).find("#txtPrice").val(git.ToDecimal(result.InPrice, 2));
                         $(item).find("#txtLocalQty").val(result.Num);
                         $(item).find("#hdProductNum").val(result.SnNum);
                         $(item).find("#spanUnitName1").text(result.UnitName);
@@ -107,7 +107,7 @@ var orderProduct = {
                         html += "<td>" + item.BarCode + "</td>";
                         html += "<td>" + item.Size + "</td>";
                         html += "<td>" + item.BatchNum + "</td>";
-                        html += "<td>" + git.ToDecimal(item.InPrice,2)+ "&nbsp;元</td>";
+                        html += "<td>" + git.ToDecimal(item.InPrice, 2) + "&nbsp;元</td>";
                         html += "<td>" + item.Num + "</td>";
                         html += "<td>" + git.ToDecimal(item.TotalPrice, 2) + "&nbsp;元</td>";
                         html += "<td>" + item.LocalName + "</td>";
@@ -338,7 +338,7 @@ var InStorageManager = {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
         pageSize = pageSize == undefined ? 10 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
-        //var orderNum = $("#txtOrderNum").val();
+        var orderNum = $("#txtOrderNum").val();
         var supNum = $("#txtSupplier").val();
         var beginTime = $("#txtBeginTime").val();
         var endTime = $("#txtEndTime").val();
@@ -347,7 +347,7 @@ var InStorageManager = {
         var ReprtNum = $("#txtReprtNum").val();
         var param = {};
         param["Status"] = status;
-        //param["OrderNum"] = orderNum;
+        param["OrderNum"] = orderNum;
         param["SupName"] = supNum;
         param["beginTime"] = beginTime;
         param["endTime"] = endTime;
@@ -371,12 +371,12 @@ var InStorageManager = {
                             html += "<td>" + item.OrderNum + "</td>";
                             html += "<td>" + git.GetEnumDesc(EInType, item.InType) + "</td>";
                             html += "<td>" + item.SupName + "</td>";
-                            //html += "<td>" + item.ContractOrder + "</td>";
+                            html += "<td>" + item.ContractOrder + "</td>";
                             html += "<td>" + item.Num + "</td>";
-                            html += "<td>" + git.ToDecimal(item.Amount,2) + "&nbsp;元</td>";
+                            html += "<td>" + git.ToDecimal(item.Amount, 2) + "&nbsp;元</td>";
                             html += "<td>" + git.GetEnumDesc(EAudite, item.Status) + "</td>";
                             html += "<td>" + item.CreateUserName + "</td>";
-                            html += "<td>" + git.GetEnumDesc(EOpType, item.OperateType) + "</td>";
+                            //html += "<td>" + git.GetEnumDesc(EOpType, item.OperateType) + "</td>";
                             html += "<td>" + git.JsonToDateTimeymd(item.CreateTime) + "</td>";
                             html += "<td>";
                             if (item.Status == EAuditeJson.Wait || item.Status == EAuditeJson.NotPass) {
@@ -384,7 +384,7 @@ var InStorageManager = {
                             }
                             html += "<a class=\"icon-remove\" href=\"javascript:void(0)\" onclick=\"InStorageManager.Delete('" + item.OrderNum + "');\" title=\"删除\"></a>&nbsp;&nbsp;";
                             html += "<a class=\"icon-eye-open\" href=\"javascript:void(0)\" onclick=\"InStorageManager.Audite(1,'" + item.OrderNum + "')\" title=\"查看\"></a>&nbsp;&nbsp;";
-                            
+
                             if (item.Status == EAuditeJson.Wait) {
                                 html += "<a class=\"icon-ok\" href=\"javascript:void(0)\" onclick=\"InStorageManager.Audite(2,'" + item.OrderNum + "')\" title=\"审核\"></a>&nbsp;&nbsp;";
                             }
@@ -408,22 +408,25 @@ var InStorageManager = {
             InStorageManager.PageClick(1, 15);
         });
     },
-    Delete: function (orderNum) {
-        if (!git.IsEmpty(orderNum)) {
-            var param = {};
-            param["OrderNum"] = orderNum;
-            $.gitAjax({
-                url: "/InStorage/ProductManagerAjax/Delete",
-                data: param,
-                type: "post",
-                dataType: "json",
-                success: function (result) {
-                    if (result.d != undefined && result.d == "Success") {
-                        InStorageManager.PageClick(1, 15);
+    Delete: function () {
+        var submit = function (orderNum) {
+            if (!git.IsEmpty(orderNum)) {
+                var param = {};
+                param["OrderNum"] = orderNum;
+                $.gitAjax({
+                    url: "/InStorage/ProductManagerAjax/Delete",
+                    data: param,
+                    type: "post",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.d != undefined && result.d == "Success") {
+                            InStorageManager.PageClick(1, 15);
+                        }
                     }
-                }
-            });
+                });
+            }
         }
+        $.jBox.confirm("确定要删除吗？", "提示", submit);
     },
     DeleteBatch: function () {
         var submit = function (v, h, f) {

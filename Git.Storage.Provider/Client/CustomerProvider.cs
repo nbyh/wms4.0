@@ -177,7 +177,7 @@ namespace Git.Storage.Provider.Client
             List<CusAddressEntity> listResult = this.CusAddress.GetList(entity);
             return listResult;
         }
-
+        
         /// <summary>
         /// 根据收货单位编号获得地址信息
         /// </summary>

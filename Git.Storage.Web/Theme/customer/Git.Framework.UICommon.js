@@ -94,7 +94,7 @@ var masterUI = {
             }
         };
         $(this).bind(defaultOption.EventName, function () {
-            $.jBox.open("get:/Storage/Location/Detail", "选择库位", 850, 500, {
+            $.jBox.open("get:/Storage/Location/Detail", "选择库位", 1000, 600, {
                 buttons: { "选择": 1, "关闭": 2 }, submit: submit, loaded: function (h) {
 
                 }
@@ -136,7 +136,7 @@ var masterUI = {
             }
         };
         $(this).bind(defaultOption.EventName, function () {
-            $.jBox.open("get:/Product/Goods/Dialog", "选择产品", 850, 500, {
+            $.jBox.open("get:/Product/Goods/Dialog", "选择产品", 1000, 600, {
                 buttons: { "选择": 1, "关闭": 2 }, submit: submit, loaded: function (h) {
 
                 }
@@ -178,7 +178,7 @@ var masterUI = {
             }
         };
         $(this).bind(defaultOption.EventName, function () {
-            $.jBox.open("get:/Client/Customer/Dialog", "选择领用", 850, 500, {
+            $.jBox.open("get:/Client/Customer/Dialog", "选择领用", 1000, 600, {
                 buttons: { "选择": 1, "关闭": 2 }, submit: submit, loaded: function (h) {
 
                 }
@@ -220,7 +220,7 @@ var masterUI = {
             }
         };
         $(this).bind(defaultOption.EventName, function () {
-            $.jBox.open("get:/Client/Supplier/Dialog", "选择领用", 850, 500, {
+            $.jBox.open("get:/Client/Supplier/Dialog", "选择领用", 1000, 600, {
                 buttons: { "选择": 1, "关闭": 2 }, submit: submit, loaded: function (h) {
 
                 }
@@ -263,7 +263,7 @@ var masterUI = {
             }
         };
         $(this).bind(defaultOption.EventName, function () {
-            $.jBox.open("get:/Home/Dialog", "选择用户", 850, 500, {
+            $.jBox.open("get:/Home/Dialog", "选择用户", 1000, 600, {
                 buttons: { "选择": 1, "关闭": 2 }, submit: submit, loaded: function (h) {
 
                 }

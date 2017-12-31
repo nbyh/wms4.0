@@ -273,7 +273,7 @@
         $("#txtOrderTime").val("");
     },
     CusNameChange: function () {
-        var Local = $("#ddlAddress");
+        var Local = $("#ContactName");
         Local.empty();
         var CusNum = $("#txtCusNum").val();
         var param = {};
@@ -287,23 +287,43 @@
                 var json = result;
                 if (json.Data != undefined && json.Data.List != undefined && json.Data.List.length > 0) {
                     
+                    //$(json.Data.List).each(function (i, item) {
+                    //    var option = $("<option>").text(item.Address).val(item.SnNum).attr("data-Contact", item.Contact).attr("data-Phone", item.Phone);
+                    //    Local.append(option);
+
+                    //    var address = $("#hdAddress").val();
+                    //    if (address != undefined && address != "") {
+                    //        $(Local).children("option").each(function (i, child) {
+                    //            if ($(child).text() == address) {
+                    //                $(child).attr("selected", true);
+                    //            }
+                    //        });
+                    //    }
+                    //    $(Local).change(function () {
+                    //        var Contact = $(this).find("option:selected").attr("data-Contact");
+                    //        var Phone = $(this).find("option:selected").attr("data-Phone");
+                    //        $("#txtCusPhone").val(Phone);
+                    //        $("#txtContactName").val(Contact);
+                    //    });
+                    //});
+
                     $(json.Data.List).each(function (i, item) {
-                        var option = $("<option>").text(item.Address).val(item.SnNum).attr("data-Contact", item.Contact).attr("data-Phone", item.Phone);
+                        var option = $("<option>").text(item.Contact).val(item.SnNum).attr("data-Address", item.Address).attr("data-Phone", item.Phone);
                         Local.append(option);
 
-                        var address = $("#hdAddress").val();
-                        if (address != undefined && address != "") {
+                        var contact = $("#hdContact").val();
+                        if (contact != undefined && contact != "") {
                             $(Local).children("option").each(function (i, child) {
-                                if ($(child).text() == address) {
+                                if ($(child).text() == contact) {
                                     $(child).attr("selected", true);
                                 }
                             });
                         }
                         $(Local).change(function () {
-                            var Contact = $(this).find("option:selected").attr("data-Contact");
+                            var Address = $(this).find("option:selected").attr("data-Address");
                             var Phone = $(this).find("option:selected").attr("data-Phone");
+                            $("#ddlAddresstxt").val(Address);
                             $("#txtCusPhone").val(Phone);
-                            $("#txtContactName").val(Contact);
                         });
                     });
                 }

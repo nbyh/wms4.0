@@ -299,7 +299,7 @@ var ProductBadManager = {
                             html += "<td>" + item.Num + "</td>";
                             html += "<td>" + git.GetEnumDesc(EAudite, item.Status) + "</td>";
                             html += "<td>" + git.GetEnumDesc(EOpType, item.OperateType) + "</td>";
-                            html += "<td>" + item.CreateUser + "</td>";
+                            html += "<td>" + item.CreateUserName + "</td>";
                             html += "<td>" + git.JsonToDateTimeymd(item.CreateTime) + "</td>";
                             html += "<td>";
                             if (item.Status == EAuditeJson.Wait) {

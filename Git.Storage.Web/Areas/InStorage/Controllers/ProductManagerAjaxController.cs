@@ -189,7 +189,7 @@ namespace Git.Storage.Web.Areas.InStorage.Controllers
             dt.Columns.Add(new DataColumn("入库单单号"));
             dt.Columns.Add(new DataColumn("入库类型"));
             dt.Columns.Add(new DataColumn("供应商"));
-            dt.Columns.Add(new DataColumn("关联单号"));
+            dt.Columns.Add(new DataColumn("关联合同编号或发票号"));
             dt.Columns.Add(new DataColumn("货品总数"));
             dt.Columns.Add(new DataColumn("总金额"));
             dt.Columns.Add(new DataColumn("状态"));

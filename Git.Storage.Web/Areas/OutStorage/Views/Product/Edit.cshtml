@@ -84,7 +84,7 @@
                                                     </div>*@
                                                 <div class="span3">
                                                     <div class="control-group">
-                                                        <label class="control-label" for="txtOrderTime">发货日期</label>
+                                                        <label class="control-label" for="txtOrderTime">领用日期</label>
                                                         <div class="controls">
                                                             <input type="text" id="txtSendDate" name="txtSendDate" class="span12" placeholder="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="@ViewBag.Entity.CreateTime.ToString("yyyy-MM-dd")" />
                                                             <span class="help-block"></span>
@@ -147,7 +147,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtCrateUser">制单人</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.CurrentLoginUser.UserName" />
+                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.Entity.CreateUserName" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>

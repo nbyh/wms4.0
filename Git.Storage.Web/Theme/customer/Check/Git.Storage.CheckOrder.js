@@ -118,7 +118,7 @@ var CheckOrder = {
                 });
             }
         };
-        $.jBox.open("get:/Product/Goods/Dialog", "选择产品", 850, 500, {
+        $.jBox.open("get:/Product/Goods/Dialog", "选择产品", 1000, 600, {
             buttons: { "全部": 3, "确定": 1, "关闭": 2 }, submit: submit, loaded: function (h) {
             }
         });

@@ -83,7 +83,7 @@
                                                     </div>*@
                                                 <div class="span3">
                                                     <div class="control-group">
-                                                        <label class="control-label" for="txtOrderTime">发货日期 </label>
+                                                        <label class="control-label" for="txtOrderTime">领用日期 </label>
                                                         <div class="controls">
                                                             <input type="text" id="txtOrderTime" name="txtOrderTime" class="span12" placeholder="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})">
                                                             <span class="help-block"></span>
@@ -111,11 +111,44 @@
                                                     </div>
                                                 </div>
 
+
+                                                @*<div class="span3">
+                                                            <div class="control-group">
+                                                                <label class="control-label" for="txtAddress">领用地址</label>
+                                                                <div class="controls">
+                                                                    <select id="ddlAddress" name="ddlAddress" class="span12" onchange="orderProduct.AddressChange()"></select>
+                                                                    <span class="help-block"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="span3">
+                                                            <div class="control-group">
+                                                                <!--control-group error-->
+                                                                <label class="control-label" for="txtCusPhone">领用联系方式</label>
+                                                                <div class="controls">
+                                                                    <input type="text" id="txtCusPhone" name="txtCusPhone" class="span12" placeholder="">
+                                                                    <span class="help-block"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-fluid">
+                                                        <div class="span3">
+                                                            <div class="control-group">
+                                                                <label class="control-label" for="txtContactName">联系人</label>
+                                                                <div class="controls">
+                                                                    <input type="text" id="txtContactName" name="txtContactName" class="span12" placeholder="" />
+                                                                    <span class="help-block"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>*@
+
+
                                                 <div class="span3">
                                                     <div class="control-group">
-                                                        <label class="control-label" for="txtAddress">领用地址</label>
+                                                        <label class="control-label" for="txtContactName">联系人</label>
                                                         <div class="controls">
-                                                            <select id="ddlAddress" name="ddlAddress" class="span12" onchange="orderProduct.AddressChange()"></select>
+                                                            <select id="ContactName" name="txtContactName" class="span12" onchange="orderProduct.AddressChange()"></select>
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -123,20 +156,21 @@
                                                 <div class="span3">
                                                     <div class="control-group">
                                                         <!--control-group error-->
-                                                        <label class="control-label" for="txtCusPhone">领用联系方式</label>
+                                                        <label class="control-label" for="txtAddress">领用地址</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtCusPhone" name="txtCusPhone" class="span12" placeholder="">
+                                                            <input type="text" id="ddlAddresstxt" name="ddlAddress" class="span12" placeholder="" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                             <div class="row-fluid">
                                                 <div class="span3">
                                                     <div class="control-group">
-                                                        <label class="control-label" for="txtContactName">联系人</label>
+                                                        <label class="control-label" for="txtCusPhone">领用联系方式</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtContactName" name="txtContactName" class="span12" placeholder="" />
+                                                            <input type="text" id="txtCusPhone" name="txtCusPhone" class="span12" placeholder="">
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>
@@ -145,7 +179,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="txtCrateUser">制单人</label>
                                                         <div class="controls">
-                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.CraterUser" />
+                                                            <input type="text" id="txtCrateUser" name="txtCrateUser" class="span12" placeholder="" value="@ViewBag.CurrentLoginUser.RealName" />
                                                             <span class="help-block"></span>
                                                         </div>
                                                     </div>

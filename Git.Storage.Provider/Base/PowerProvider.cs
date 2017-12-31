@@ -105,7 +105,7 @@ namespace Git.Storage.Provider.Base
             List<SysRelationEntity> list = GetList();
             if (!list.IsNullOrEmpty())
             {
-                List<SysRelationEntity> listResult= list.Where(a => a.RoleNum == roleNum).ToList();
+                List<SysRelationEntity> listResult = list.Where(a => a.RoleNum == roleNum).ToList();
                 return listResult;
             }
             return null;
@@ -121,7 +121,7 @@ namespace Git.Storage.Provider.Base
         {
             List<SysResourceEntity> ListResult = GetRoleResource(RoleNum);
             ListResult = ListResult.IsNull() ? new List<SysResourceEntity>() : ListResult;
-            bool hasPower = ListResult.Exists(a => a.ResNum.ToLower() == ResNum.ToLower() || a.Url.ToLower() == ResNum.ToLower());
+            bool hasPower = ListResult.Exists(a => a.ResNum.ToLower() == ResNum.ToLower() || a.Url.ToLower() == ResNum.ToLower()) || ResNum.Contains("Dialog") || ResNum.Contains("Home");
             //超级管理员权限
             if (RoleNum == ResourceManager.GetSettingEntity("Super_AdminRole").Value)
             {
