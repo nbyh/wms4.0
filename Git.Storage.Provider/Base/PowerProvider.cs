@@ -121,7 +121,7 @@ namespace Git.Storage.Provider.Base
         {
             List<SysResourceEntity> ListResult = GetRoleResource(RoleNum);
             ListResult = ListResult.IsNull() ? new List<SysResourceEntity>() : ListResult;
-            bool hasPower = ListResult.Exists(a => a.ResNum.ToLower() == ResNum.ToLower() || a.Url.ToLower() == ResNum.ToLower()) || ResNum.Contains("Dialog") || ResNum.Contains("Home");
+            bool hasPower = ListResult.Exists(a => ResNum.ToLower().Contains(a.ResNum.ToLower()) || ResNum.ToLower().Contains(a.Url.ToLower())) || ResNum.Contains("Dialog") || ResNum.Contains("Home");
             //超级管理员权限
             if (RoleNum == ResourceManager.GetSettingEntity("Super_AdminRole").Value)
             {

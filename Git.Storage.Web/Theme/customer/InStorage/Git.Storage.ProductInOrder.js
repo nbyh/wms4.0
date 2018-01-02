@@ -408,24 +408,26 @@ var InStorageManager = {
             InStorageManager.PageClick(1, 15);
         });
     },
-    Delete: function () {
-        var submit = function (orderNum) {
-            if (!git.IsEmpty(orderNum)) {
+    Delete: function (orderNum) {
+        var submit = function (v, h, f) {
+            if (v == 'ok') {
                 var param = {};
                 param["OrderNum"] = orderNum;
                 $.gitAjax({
                     url: "/InStorage/ProductManagerAjax/Delete",
-                    data: param,
                     type: "post",
+                    data: param,
                     dataType: "json",
                     success: function (result) {
                         if (result.d != undefined && result.d == "Success") {
                             InStorageManager.PageClick(1, 15);
+                        } else {
+                            $.jBox.tip("删除失败", "error");
                         }
                     }
                 });
             }
-        }
+        };
         $.jBox.confirm("确定要删除吗？", "提示", submit);
     },
     DeleteBatch: function () {
