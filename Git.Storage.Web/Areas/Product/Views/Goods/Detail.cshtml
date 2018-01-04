@@ -23,9 +23,9 @@
                 <td>产品编号</td>
                 <td>
                     <input id="txtSnNum" name="txtSnNum" type="text" placeholder="自动生成,可不填" class="input-medium" disabled="disabled" value="@ViewBag.Goods.SnNum"></td>
-                <td>产品条码</td>
+                @*<td>产品条码</td>
                 <td>
-                    <input id="txtBarCode" name="txtBarCode" type="text" placeholder="" class="input-medium" value="@ViewBag.Goods.BarCode"></td>
+                    <input id="txtBarCode" name="txtBarCode" type="text" placeholder="" class="input-medium" value="@ViewBag.Goods.BarCode"></td>*@
             </tr>
             <tr>
                 <td>产品名称</td>
@@ -58,7 +58,7 @@
                     </select>
                 </td>
             </tr>
-            <tr>
+            @*<tr>
                 <td>价格</td>
                 <td><input id="txtAvgPrice" name="txtAvgPrice" type="text" placeholder="" class="input-medium" value="@ViewBag.Goods.AvgPrice"/></td>
                 <td>领用</td>
@@ -67,8 +67,8 @@
                         @Html.Raw(ViewBag.Customer)
                     </select>
                 </td>
-            </tr>
-            <tr>
+            </tr>*@
+            @*<tr>
                 <td>默认仓库</td>
                 <td>
                     <select id="ddlStorage" name="ddlStorage" class="input-medium" onchange="Product.DdlChange('@ViewBag.Goods.DefaultLocal')" style="width:165px;">
@@ -82,10 +82,10 @@
                         @Html.Raw(ViewBag.Local)
                     </select>
                 </td>
-            </tr>
+            </tr>*@
             <tr>
                 <td>描述</td>
-                <td colspan="3">
+                <td colspan="6">
                     <input id="txtDescripte" name="txtDescripte" type="text" placeholder="" class="input-medium" value="@ViewBag.Goods.Description"/>
                 </td>
             </tr>

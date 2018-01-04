@@ -174,11 +174,11 @@ var Product = {
                         Html += "<tr class=\"odd gradeX\">";
                         Html += "<td><input type=\"checkbox\" name=\"user_item\" class=\"checkboxes\" data=\"" + item.SnNum + "\" value=\"" + item.SnNum + "\"/></td>";
                         Html += "<td>" + item.SnNum + "</td>";
-                        Html += "<td>" + item.BarCode + "</td>";
+                        //Html += "<td>" + item.BarCode + "</td>";
                         Html += "<td>" + item.ProductName + "</td>";
-                        Html += "<td>" + item.MinNum + "</td>";
-                        Html += "<td>" + item.MaxNum + "</td>";
-                        Html += "<td>" + item.AvgPrice + "</td>";
+                        //Html += "<td>" + item.MinNum + "</td>";
+                        //Html += "<td>" + item.MaxNum + "</td>";
+                        //Html += "<td>" + item.AvgPrice + "</td>";
                         Html += "<td>" + item.Size + "</td>";
                         Html += "<td>" + item.CateName + "</td>";
                         Html += "<td>" + item.UnitName + "</td>";
@@ -280,10 +280,10 @@ var Product = {
                 var DefaultLocal = h.find("#ddlLocal  option:selected").val();
                 var CusNum = h.find("#ddlCustomer option:selected").val();
                 var CusName = h.find("#ddlCustomer option:selected").html();
-                if (BarCode == undefined || BarCode == "") {
-                    $.jBox.tip("请输入条码编号", "warn");
-                    return false;
-                }
+                //if (BarCode == undefined || BarCode == "") {
+                //    $.jBox.tip("请输入条码编号", "warn");
+                //    return false;
+                //}
                 if (ProductName == undefined || ProductName == "") {
                     $.jBox.tip("请输入产品名称", "warn");
                     return false;
