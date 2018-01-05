@@ -2,7 +2,7 @@
 var SupplierReport = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var queryTime = $("#liStatusGroup").find(".active").find("input:hidden").val();
         var param = {};
         param["QueryTime"] = queryTime;
@@ -41,7 +41,7 @@ var SupplierReport = {
     //显示订单数量排名前十的领用
     SupplierReportTOP10: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var queryTime = $("#liStatusGroup").find(".active").find("input:hidden").val();
         var param = {};
         param["QueryTime"] = queryTime;

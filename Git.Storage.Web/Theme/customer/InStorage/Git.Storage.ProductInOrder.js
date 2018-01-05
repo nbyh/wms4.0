@@ -336,7 +336,7 @@ var orderProduct = {
 var InStorageManager = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
         var orderNum = $("#txtOrderNum").val();
         var supNum = $("#txtSupplier").val();

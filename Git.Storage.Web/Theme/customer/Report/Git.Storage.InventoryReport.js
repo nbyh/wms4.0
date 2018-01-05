@@ -1,6 +1,6 @@
 ﻿var InventoryBook = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var change = $("#ddlChange").val();
         var searchKey = $("#txtProduct").val();
         var beginTime = $("#txtBeginTime").val();

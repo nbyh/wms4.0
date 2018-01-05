@@ -468,7 +468,7 @@
 var OutStore = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
         //var OrderNum = $("#txtOutStoreNum").val();
         var CusName = $("#txtCustomer").val();

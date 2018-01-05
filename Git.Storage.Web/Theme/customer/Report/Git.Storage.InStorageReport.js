@@ -3,7 +3,7 @@ $("#hdIndex").val("1");
 var InStorageReport = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var queryTime = $("#liStatusGroup").find(".active").find("input:hidden").val();
         var param = {};
         param["QueryTime"] = queryTime;
@@ -42,7 +42,7 @@ var InStorageReport = {
     //根据时间段显示入库的情况以及图表情况
     PageClickDetail: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var queryTime = $("#liStatusGroup").find(".active").find("input:hidden").val();
         var param = {};
         param["QueryTime"] = queryTime;

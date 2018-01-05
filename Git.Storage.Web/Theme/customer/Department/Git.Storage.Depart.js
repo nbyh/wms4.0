@@ -1,7 +1,7 @@
 ﻿
 var Depart = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var departName = $("#txtDepartName").val();
         var page = {};
         page["PageIndex"] = pageIndex;
@@ -58,7 +58,7 @@ var Depart = {
                             } else {
                                 $.jBox.tip("编辑成功", "success");
                             }
-                            Depart.PageClick(1,10);
+                            Depart.PageClick(1,15);
                             return true;
                         } else {
                             if (departNum == undefined || departNum == "") {
@@ -89,7 +89,7 @@ var Depart = {
                 $.gitAjax({
                     url: "/DepartAjax/Delete", type: "post", data: param, success: function (result) {
                         if (result.d == "success") {
-                            Depart.PageClick(1,10);
+                            Depart.PageClick(1,15);
                         } else {
                             $.jBox.tip("删除失败", "error");
                         }

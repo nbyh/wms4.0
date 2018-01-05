@@ -2,7 +2,7 @@
 
 var Location = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var StorageName = $("#ddlStorageName").val();
         var LocalName = $("#txtLocalName").val();
         var LocalType = $("#ddlLocalType").val();

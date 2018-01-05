@@ -262,7 +262,7 @@ var ProductBadOrder = {
 var ProductBadManager = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
         var badType = $("#ddlBadType").val();
         var orderNum = $("#txtOrderNum").val();

@@ -1,7 +1,7 @@
 ﻿
 var Category = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var cateName = $("#txtCategory").val();
         var param = {};
         param["pageIndex"] = pageIndex;
@@ -153,7 +153,7 @@ var Category = {
 
 var Product = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var ProductName = $("#txtProduct").val();
         var CateNum = $("#ddlCategory").val();
         var param = {};

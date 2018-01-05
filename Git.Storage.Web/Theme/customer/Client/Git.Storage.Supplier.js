@@ -1,7 +1,7 @@
 ﻿var juploader = null;
 var Supplier = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var SupNum = $("#txtSupNum").val();
         var SupName = $("#txtSupName").val();
         var param = {};

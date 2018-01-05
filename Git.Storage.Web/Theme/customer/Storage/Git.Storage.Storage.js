@@ -1,6 +1,6 @@
 ﻿var Storage = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var StorageName = $("#txtStorageName").val();
         var StorageType = $("#ddlStorageType").val();
         var IsForbid = $("#ddlIsForbid").val();

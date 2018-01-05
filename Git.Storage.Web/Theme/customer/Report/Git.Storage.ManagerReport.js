@@ -227,7 +227,7 @@ var ReportManage = {
 var ReportListManager = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
         var ReportName = $("#txtReportName").val();
         var ReportType = $("#ddlOrderType").val();
@@ -294,7 +294,7 @@ var ReportListManager = {
             data: param,
             async: false,
             success: function (result) {
-                ReportListManager.PageClick(1,10);
+                ReportListManager.PageClick(1,15);
             }
         });
     },

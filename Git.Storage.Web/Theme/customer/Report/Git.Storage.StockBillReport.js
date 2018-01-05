@@ -1,6 +1,6 @@
 ﻿var StockBillReport = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var localName = $("#txtLocalName").val();
         var localType = $("#ddlLocalType").val();
         var productName = $("#txtProduct").val();

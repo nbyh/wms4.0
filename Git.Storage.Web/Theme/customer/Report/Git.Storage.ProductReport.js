@@ -1,6 +1,6 @@
 ﻿var ProductReport = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var ProductName = $("#txtProduct").val();
         var beginTime = $("#txtBeginTime").val();
         var endTime = $("#txtEndTime").val();

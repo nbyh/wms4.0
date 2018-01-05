@@ -125,7 +125,7 @@ var CheckOrder = {
     },
     LoadDetail: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var param = {};
         param["PageSize"] = pageSize;
         param["PageIndex"] = pageIndex;
@@ -155,7 +155,7 @@ var CheckOrder = {
     },
     LoadEditDetail: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var param = {};
         param["PageSize"] = pageSize;
         param["PageIndex"] = pageIndex;
@@ -206,7 +206,7 @@ var CheckOrder = {
 var CheckManager = {
     PageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var status = $("#btnStatusGroup").find(".disabled").val();
         var orderNum = $("#txtOrderNum").val();
         var beginTime = $("#txtBeginTime").val();
@@ -298,7 +298,7 @@ var CheckManager = {
     },
     DifPageClick: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var orderNum = $("#txtOrderNum").val();
         var Status = $("#txtStatus").val();
         var IsComplete = $("#txtIsComplete").val();
@@ -349,7 +349,7 @@ var CheckManager = {
     },
     Check: function (pageIndex, pageSize) {
         pageIndex = pageIndex == undefined ? 1 : pageIndex;
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var orderNum = $("#txtOrderNum").val();
         var Status = $("#txtStatus").val();
         var param = {};

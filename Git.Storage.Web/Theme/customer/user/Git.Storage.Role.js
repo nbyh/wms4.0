@@ -1,7 +1,7 @@
 ﻿
 var Role = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var roleName = $("#txtRoleName").val();
         var page = {};
         page["PageIndex"] = pageIndex;

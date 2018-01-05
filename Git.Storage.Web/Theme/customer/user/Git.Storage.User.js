@@ -1,6 +1,6 @@
 ﻿var User = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var search = $("#txtSearch").val();
         var userCode = $("#txtUserCode").val();
         var userName = $("#txtUserName").val();

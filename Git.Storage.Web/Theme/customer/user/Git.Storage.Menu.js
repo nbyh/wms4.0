@@ -1,7 +1,7 @@
 ﻿
 var UserMenu = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var resName = $("#txtResName").val();
         var parentNum = $("#ddlParentNum").val();
         var param = {};

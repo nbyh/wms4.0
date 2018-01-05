@@ -1,7 +1,7 @@
 ﻿
 var Measure = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var name = $("#txtMeasure").val();
         var param = {};
         param["PageIndex"] = pageIndex;
@@ -54,7 +54,7 @@ var Measure = {
                     success: function (result) {
                         if (git.IsEmpty(Num)) {
                             if (result.Key == "1000") {
-                                Measure.PageClick(1,10);
+                                Measure.PageClick(1,15);
                                 $.jBox.tip("添加成功", "success");
                             } else {
                                 $.jBox.tip("添加失败", "error");

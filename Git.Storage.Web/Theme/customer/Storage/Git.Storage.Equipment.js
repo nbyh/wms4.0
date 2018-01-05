@@ -1,7 +1,7 @@
 ﻿
 var Equipment = {
     PageClick: function (pageIndex, pageSize) {
-        pageSize = pageSize == undefined ? 10 : pageSize;
+        pageSize = pageSize == undefined ? 15 : pageSize;
         var EquipmentName = $("#txtEquipmentName").val();
         var Status = $("#ddlStatus").val();
         var param = {};
