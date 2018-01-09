@@ -788,9 +788,9 @@ var OutStore = {
             }
         };
         if (flag == 1) {
-            $.jBox.open("get:/OutStorage/Product/Detail?flag=" + flag + "&orderNum=" + orderNum, "出库单详细", 800, 410, { buttons: { "关闭": 3 }, submit: submit });
+            $.jBox.open("get:/OutStorage/Product/Detail?flag=" + flag + "&orderNum=" + orderNum, "出库单详细", 800, 600, { buttons: { "关闭": 3 }, submit: submit });
         } else if (flag == 2) {
-            $.jBox.open("get:/OutStorage/Product/Detail?flag=" + flag + "&orderNum=" + orderNum, "出库单审核", 800, 410, { buttons: { "审核通过": 1, "审核不通过": 2, "关闭": 3 }, submit: submit });
+            $.jBox.open("get:/OutStorage/Product/Detail?flag=" + flag + "&orderNum=" + orderNum, "出库单审核", 800, 600, { buttons: { "审核通过": 1, "审核不通过": 2, "关闭": 3 }, submit: submit });
         }
     },
     SearchEvent: function () {

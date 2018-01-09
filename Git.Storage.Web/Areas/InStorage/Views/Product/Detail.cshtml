@@ -80,9 +80,9 @@
             <thead>
                 <tr class="widget-title">
                     <th class="hidden-480">产品名称</th>
-                    <th class="hidden-480">产品条码</th>
+                    @*<th class="hidden-480">产品条码</th>*@
                     <th class="hidden-480">规格</th>
-                    <th class="hidden-480">批次</th>
+                    @*<th class="hidden-480">批次</th>*@
                     <th class="hidden-480">单价</th>
                     <th class="hidden-480">入库数</th>
                     <th class="hidden-480">总价</th>
@@ -94,9 +94,9 @@
                 { 
                     <tr>
                         <td title="@entity.ProductName">@entity.ProductName.SubStr(0,12,"...")</td>
-                        <td>@entity.BarCode</td>
+                        @*<td>@entity.BarCode</td>*@
                         <td>@entity.Size</td>
-                        <td>@entity.BatchNum</td>
+                        @*<td>@entity.BatchNum</td>*@
                         <td>@entity.InPrice.ToString("0.00")&nbsp;元</td>
                         <td>@entity.Num</td>
                         <td>@entity.Amount.ToString("0.00")&nbsp;元</td>

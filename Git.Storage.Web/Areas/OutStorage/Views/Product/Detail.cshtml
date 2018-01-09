@@ -1,10 +1,8 @@
 ﻿@{
     Layout = null;
 }
-
 @using Git.Framework.DataTypes;
 @using Git.Framework.DataTypes.ExtensionMethods;
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="zh" class="ie9"> <![endif]-->
@@ -29,7 +27,6 @@
                 <td class="inorder_tdTitle inorder_topline"><strong>状态</strong></td>
                 <td class="inorder_tdContent inorder_topline">@ViewBag.Status</td>
             </tr>
-
             <tr class="inorder_tr">
                 <td class="inorder_tdTitle"><strong>领用编号</strong></td>
                 <td class="inorder_tdContent">@ViewBag.Entity.CusNum</td>
@@ -40,7 +37,7 @@
             </tr>
             <tr class="inorder_tr">
                 @*<td class="inorder_tdTitle"><strong>关联订单号</strong></td>
-                <td class="inorder_tdContent">@ViewBag.Entity.ContractOrder</td>*@
+                    <td class="inorder_tdContent">@ViewBag.Entity.ContractOrder</td>*@
                 <td class="inorder_tdTitle"><strong>创建人</strong></td>
                 <td class="inorder_tdContent">@ViewBag.Entity.CreateUser</td>
                 <td class="inorder_tdTitle"><strong>创建时间</strong></td>
@@ -56,7 +53,7 @@
                 <td class="inorder_tdTitle"><strong>审核意见</strong></td>
                 <td class="inorder_tdContent" colspan="5">
                     @if (ViewBag.Flag == "1")
-                    { 
+                    {
                         @ViewBag.Entity.Reason
                     }
                     else
@@ -70,28 +67,28 @@
             <thead>
                 <tr class="widget-title">
                     <th class="hidden-480">产品名称</th>
-                    <th class="hidden-480">产品条码</th>
-                    <th class="hidden-480">产品编号</th>
-                    <th class="hidden-480">批次</th>
-                    <th class="hidden-480">单价</th>
-                    <th class="hidden-480">总价</th>
+                    @*<th class="hidden-480">产品条码</th>
+                        <th class="hidden-480">产品编号</th>
+                        <th class="hidden-480">批次</th>*@
                     <th class="hidden-480">规格</th>
+                    <th class="hidden-480">单价</th>
                     <th class="hidden-480">出库数</th>
+                    <th class="hidden-480">总价</th>
                     <th class="hidden-480">出库库位</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (Git.Storage.Entity.OutStorage.OutStoDetailEntity entity in ViewBag.Detail)
-                { 
+                {
                     <tr data-ProductNum="@entity.ProductNum">
                         <td title="@entity.ProductName">@entity.ProductName.SubStr(0, 12, "...")</td>
-                        <td>@entity.BarCode</td>
-                        <td>@entity.ProductNum</td>
-                        <td>@entity.BatchNum</td>
-                        <td>@entity.OutPrice.ToString("0.00")&nbsp;元</td>
-                        <td>@entity.Amount.ToString("0.00")&nbsp;元</td>
+                        @*<td>@entity.BarCode</td>
+                            <td>@entity.ProductNum</td>
+                            <td>@entity.BatchNum</td>*@
                         <td>@entity.Size</td>
+                        <td>@entity.OutPrice.ToString("0.00")&nbsp;元</td>
                         <td>@entity.Num</td>
+                        <td>@entity.Amount.ToString("0.00")&nbsp;元</td>
                         <td>@entity.LocalName</td>
                     </tr>
                 }

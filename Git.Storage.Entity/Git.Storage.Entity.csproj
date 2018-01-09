@@ -11,7 +11,7 @@
     <AssemblyName>Git.Storage.Entity</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AssemblyVersion>2018.1.8.24</AssemblyVersion>
+    <AssemblyVersion>2018.1.9.25</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
